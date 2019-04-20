@@ -10,11 +10,32 @@ import UIKit
 
 class WelcomeViewController: UIViewController {
 
+    @IBOutlet weak var termsAndConditionsView: UIView!
+    @IBOutlet weak var registerAndLoginBtnView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        viewsinit()
     }
     
-
+    func viewsinit() {
+        
+        termsAndConditionsView.layer.cornerRadius = 14
+        termsAndConditionsView.layer.shadowColor = UIColor.gray.cgColor
+        termsAndConditionsView.layer.shadowRadius = 3
+        termsAndConditionsView.layer.shadowOpacity = 12
+        termsAndConditionsView.layer.masksToBounds = false
+        
+        registerAndLoginBtnView.layer.shadowColor = UIColor.gray.cgColor
+        registerAndLoginBtnView.layer.shadowRadius = 3
+        registerAndLoginBtnView.layer.shadowOpacity = 12
+        registerAndLoginBtnView.layer.masksToBounds = false
+    }
+    
+    @IBAction func registerBtnAction(_ sender: UIButton) {
+    }
+    @IBAction func loginBtnAction(_ sender: UIButton) {
+    }
+    
 }

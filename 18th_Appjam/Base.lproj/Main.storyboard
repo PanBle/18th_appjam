@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bSz-yw-DcS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -53,12 +53,18 @@
                                         <state key="normal" title="회원가입">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="registerBtnAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gex-0r-yAo"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hbg-3h-eLV">
                                         <rect key="frame" x="134" y="60" width="146" height="30"/>
                                         <state key="normal" title="이미 계정이 있으신가요?">
                                             <color key="titleColor" red="0.25490196078431371" green="0.37254901960784315" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="loginBtnAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HTW-Rl-teI"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -115,6 +121,8 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="registerAndLoginBtnView" destination="Xm0-yN-IjW" id="gum-yh-GHM"/>
+                        <outlet property="termsAndConditionsView" destination="gIL-zO-CBF" id="km4-jh-P6V"/>
                         <segue destination="naj-S2-B7a" kind="presentation" identifier="LoginSegue" id="GTA-GI-egU"/>
                         <segue destination="nDr-1d-aUQ" kind="presentation" identifier="RegisterSegue" id="Ae8-Lk-KUh"/>
                     </connections>
@@ -168,7 +176,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="presentation" id="3d0-M1-RJe"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="welcomeSegue" id="3d0-M1-RJe"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mgK-PT-g7K" userLabel="First Responder" sceneMemberID="firstResponder"/>
