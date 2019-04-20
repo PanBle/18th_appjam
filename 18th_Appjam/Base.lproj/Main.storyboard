@@ -507,6 +507,9 @@
                                 <rect key="frame" x="136" y="164" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="버튼"/>
+                                <connections>
+                                    <action selector="CompleteButton:" destination="3FG-zG-7Mc" eventType="touchUpInside" id="7Hd-TE-Boq"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

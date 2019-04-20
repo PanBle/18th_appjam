@@ -1,7 +1,7 @@
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '9.0'
 
-pod 'Alamofire', '~> 5.0.0-beta.5'
+pod 'Alamofire'
 pod 'SwiftyJSON', '~> 4.0'
 pod 'Toast-Swift', '~> 5.0.0'
 pod 'SnapKit', '~> 4.0.0'
