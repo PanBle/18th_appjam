@@ -43,8 +43,6 @@ class InterestViewController: UIViewController, UICollectionViewDataSource, UICo
 
         // Do any additional setup after loading the view.
     }
-    @IBOutlet weak var interest: UICollectionView!
-    
     func viewsInit() {
         completeBtn.makeRoundRadius(cornerRadius: 14)
         completeBtn.makeShadow(color: "#415FFF", opacity: 0.5, radius: 12)

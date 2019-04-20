@@ -1025,7 +1025,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="InterestCell" id="m6Q-Vs-Zar">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="InterestCell" id="m6Q-Vs-Zar" customClass="CustomCell" customModule="_8th_Appjam" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="166" height="212"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -1059,6 +1059,11 @@
                                             <constraint firstAttribute="bottom" secondItem="0fL-Uv-jLt" secondAttribute="bottom" id="e9u-g3-CDw"/>
                                             <constraint firstAttribute="trailing" secondItem="0fL-Uv-jLt" secondAttribute="trailing" id="odj-Od-bLh"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="interestImageView" destination="0fL-Uv-jLt" id="Sie-DA-ghK"/>
+                                            <outlet property="nameLabel" destination="cwv-wT-tUH" id="Vua-Lr-jR0"/>
+                                            <outlet property="numberLabel" destination="D6t-Ck-fz4" id="mKZ-9E-5Jr"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -1120,6 +1125,7 @@
                         <barButtonItem key="leftBarButtonItem" title="ID/PW" id="5Ye-0B-lig"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="collectionView" destination="BWp-BX-IpV" id="eh3-Yl-jFA"/>
                         <outlet property="completeBtn" destination="G5y-1o-Nap" id="NpM-Ti-sdP"/>
                         <segue destination="cUP-Oy-Fop" kind="presentation" identifier="StartUpSegue" id="7kz-EH-oi9"/>
                     </connections>
