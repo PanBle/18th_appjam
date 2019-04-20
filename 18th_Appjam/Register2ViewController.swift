@@ -25,7 +25,8 @@ class Register2ViewController: UIViewController {
     }
     
     @IBAction func completeButton(_ sender: Any) {
-        self.performSegue(withIdentifier: "", sender: nil)
+        SendRegisterData.shared.username = nameTextField.text!
+        self.performSegue(withIdentifier: "InterestSegue", sender: nil)
     }
     
     /*

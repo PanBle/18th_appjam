@@ -26,6 +26,9 @@ class Register1ViewController: UIViewController {
     @IBAction func CompleteButton(_ sender: Any) {
         if validateEmail() && passwd1TextField.text! == passwd2TextField.text!
         {
+            SendRegisterData.shared.email = emailTextField.text!
+            SendRegisterData.shared.passwd1 = passwd1TextField.text!
+            SendRegisterData.shared.passwd2 = passwd2TextField.text!
             performSegue(withIdentifier: "Register2Segue", sender: nil)
         }
         else{
