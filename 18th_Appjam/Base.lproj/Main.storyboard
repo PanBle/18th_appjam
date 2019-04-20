@@ -47,8 +47,11 @@
                                 <rect key="frame" x="0.0" y="755" width="414" height="107"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EFE-lr-56U">
-                                        <rect key="frame" x="15" y="11" width="384" height="36"/>
+                                        <rect key="frame" x="15" y="11" width="384" height="56"/>
                                         <color key="backgroundColor" red="0.25490196078431371" green="0.37254901960784315" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="56" id="AeJ-ve-xiL"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <state key="normal" title="회원가입">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -58,7 +61,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hbg-3h-eLV">
-                                        <rect key="frame" x="134" y="60" width="146" height="30"/>
+                                        <rect key="frame" x="134" y="80" width="146" height="30"/>
                                         <state key="normal" title="이미 계정이 있으신가요?">
                                             <color key="titleColor" red="0.25490196078431371" green="0.37254901960784315" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
@@ -121,6 +124,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="RegisterBtn" destination="EFE-lr-56U" id="hcm-kT-JHD"/>
                         <outlet property="registerAndLoginBtnView" destination="Xm0-yN-IjW" id="gum-yh-GHM"/>
                         <outlet property="termsAndConditionsView" destination="gIL-zO-CBF" id="km4-jh-P6V"/>
                         <segue destination="naj-S2-B7a" kind="presentation" identifier="LoginSegue" id="GTA-GI-egU"/>
@@ -177,8 +181,11 @@
                                 <rect key="frame" x="0.0" y="755" width="414" height="107"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="euN-np-8SJ">
-                                        <rect key="frame" x="15" y="11" width="384" height="36"/>
+                                        <rect key="frame" x="15" y="11" width="384" height="56"/>
                                         <color key="backgroundColor" red="0.25490196079999999" green="0.37254901959999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="56" id="bhE-2f-LRP"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <state key="normal" title="동의하고 시작하기">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -188,7 +195,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YeM-IZ-M9e">
-                                        <rect key="frame" x="134" y="60" width="146" height="30"/>
+                                        <rect key="frame" x="134" y="80" width="146" height="30"/>
                                         <state key="normal" title="이미 계정이 있으신가요?">
                                             <color key="titleColor" red="0.25490196079999999" green="0.37254901959999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
@@ -425,10 +432,10 @@
             </objects>
             <point key="canvasLocation" x="-864" y="787"/>
         </scene>
-        <!--Main View Controller-->
+        <!--Search View Controller-->
         <scene sceneID="P6b-Ie-IGU">
             <objects>
-                <viewController id="jhn-Vh-mbJ" customClass="MainViewController" customModule="_8th_Appjam" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="jhn-Vh-mbJ" customClass="SearchViewController" customModule="_8th_Appjam" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Tg3-mI-sfN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -449,7 +456,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="7pu-X2-UBj">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SearchCell" id="7pu-X2-UBj">
                                         <rect key="frame" x="0.0" y="0.0" width="166" height="212"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -536,14 +543,14 @@
                                 </state>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FMi-Oj-dQn">
-                                <rect key="frame" x="165" y="119" width="84" height="84"/>
+                                <rect key="frame" x="165" y="75" width="84" height="84"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="FMi-Oj-dQn" secondAttribute="height" multiplier="1:1" id="cjG-7U-Cax"/>
                                     <constraint firstAttribute="width" constant="84" id="mwS-Mc-wv2"/>
                                 </constraints>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="이름" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Apn-WF-L4a">
-                                <rect key="frame" x="34.5" y="233" width="345" height="46"/>
+                                <rect key="frame" x="34.5" y="189" width="345" height="46"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.029999999999999999" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="46" id="AEw-Qd-ajA"/>
@@ -554,7 +561,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="출생년도" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="K9n-u6-xbg">
-                                <rect key="frame" x="34.5" y="289" width="235" height="46"/>
+                                <rect key="frame" x="34.5" y="245" width="235" height="46"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.029999999999999999" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="235" id="4Ta-WA-cz5"/>
@@ -565,7 +572,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VcE-Re-2Fc">
-                                <rect key="frame" x="279.5" y="289" width="46" height="46"/>
+                                <rect key="frame" x="279.5" y="245" width="46" height="46"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.029999999999999999" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="46" id="Mxv-2P-5iQ"/>
@@ -575,7 +582,7 @@
                                 <state key="normal" title="남"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sma-4D-sCq">
-                                <rect key="frame" x="333.5" y="289" width="46" height="46"/>
+                                <rect key="frame" x="333.5" y="245" width="46" height="46"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.029999999999999999" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="46" id="55A-Op-cnm"/>
@@ -585,7 +592,7 @@
                                 <state key="normal" title="여"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PIg-JQ-DTz">
-                                <rect key="frame" x="165" y="119" width="84" height="84"/>
+                                <rect key="frame" x="165" y="75" width="84" height="84"/>
                                 <state key="normal" title="Button"/>
                             </button>
                         </subviews>
@@ -781,10 +788,10 @@
             </objects>
             <point key="canvasLocation" x="-29" y="2287"/>
         </scene>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="H1j-Y5-wuq">
             <objects>
-                <viewController id="BXt-6j-qqb" sceneMemberID="viewController">
+                <viewController id="BXt-6j-qqb" customClass="MainViewController" customModule="_8th_Appjam" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EG9-Vx-9v8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -838,7 +845,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="ozW-a3-7uu">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MainCell" id="ozW-a3-7uu">
                                         <rect key="frame" x="0.0" y="0.0" width="166" height="212"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -995,7 +1002,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="m6Q-Vs-Zar">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="InterestCell" id="m6Q-Vs-Zar">
                                         <rect key="frame" x="0.0" y="0.0" width="166" height="212"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -1184,6 +1191,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="s0P-Pj-8Q8"/>
-        <segue reference="wEZ-Sv-27s"/>
+        <segue reference="6zy-9w-Q22"/>
     </inferredMetricsTieBreakers>
 </document>

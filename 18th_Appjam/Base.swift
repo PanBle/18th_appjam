@@ -7,9 +7,23 @@
 //
 
 import UIKit
+import UIColor_Hex_Swift
 
 extension UIViewController {
-    func radius(<#parameters#>) -> <#return type#> {
-        <#function body#>
+    func movePage(segueName: String) {
+        self.performSegue(withIdentifier: segueName, sender: nil)
+    }
+}
+
+extension UIView {
+    func makeRoundRadius(cornerRadius: CGFloat) {
+        self.layer.cornerRadius = cornerRadius
+    }
+    
+    func makeShadow(color: String, opacity: Float, radius: CGFloat) {
+        self.layer.masksToBounds = false
+        self.layer.shadowColor = UIColor(named: color)?.cgColor
+        self.layer.shadowOpacity = opacity
+        self.layer.shadowRadius = radius
     }
 }
