@@ -11,13 +11,17 @@
 		4B4157FF1F72767C0E66E447 /* Pods_18th_AppjamUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A48B181111D19023C177BE1C /* Pods_18th_AppjamUITests.framework */; };
 		8653BF2992A10131B8B53069 /* Pods_18th_AppjamTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9968507D2DD5E06D2EFFF38 /* Pods_18th_AppjamTests.framework */; };
 		BE9F549C226B2290008EC417 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9F549B226B2290008EC417 /* AppDelegate.swift */; };
-		BE9F549E226B2290008EC417 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9F549D226B2290008EC417 /* ViewController.swift */; };
+		BE9F549E226B2290008EC417 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9F549D226B2290008EC417 /* LoginViewController.swift */; };
 		BE9F54A1226B2290008EC417 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE9F549F226B2290008EC417 /* Main.storyboard */; };
 		BE9F54A4226B2290008EC417 /* _8th_Appjam.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BE9F54A2226B2290008EC417 /* _8th_Appjam.xcdatamodeld */; };
 		BE9F54A6226B2293008EC417 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE9F54A5226B2293008EC417 /* Assets.xcassets */; };
 		BE9F54A9226B2293008EC417 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE9F54A7226B2293008EC417 /* LaunchScreen.storyboard */; };
 		BE9F54B4226B2293008EC417 /* _8th_AppjamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9F54B3226B2293008EC417 /* _8th_AppjamTests.swift */; };
 		BE9F54BF226B2293008EC417 /* _8th_AppjamUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9F54BE226B2293008EC417 /* _8th_AppjamUITests.swift */; };
+		BE9F54CD226B3BBF008EC417 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9F54CC226B3BBF008EC417 /* RegisterViewController.swift */; };
+		BE9F54CF226B3C2D008EC417 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9F54CE226B3C2D008EC417 /* WelcomeViewController.swift */; };
+		BE9F54D1226B3CD8008EC417 /* CertifiedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9F54D0226B3CD8008EC417 /* CertifiedViewController.swift */; };
+		BE9F54D3226B3DB4008EC417 /* InterestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9F54D2226B3DB4008EC417 /* InterestViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +49,7 @@
 		A9968507D2DD5E06D2EFFF38 /* Pods_18th_AppjamTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_18th_AppjamTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE9F5498226B2290008EC417 /* 18th_Appjam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 18th_Appjam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE9F549B226B2290008EC417 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BE9F549D226B2290008EC417 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BE9F549D226B2290008EC417 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		BE9F54A0226B2290008EC417 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BE9F54A3226B2290008EC417 /* _8th_Appjam.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = _8th_Appjam.xcdatamodel; sourceTree = "<group>"; };
 		BE9F54A5226B2293008EC417 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -57,6 +61,10 @@
 		BE9F54BA226B2293008EC417 /* 18th_AppjamUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 18th_AppjamUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE9F54BE226B2293008EC417 /* _8th_AppjamUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _8th_AppjamUITests.swift; sourceTree = "<group>"; };
 		BE9F54C0226B2293008EC417 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE9F54CC226B3BBF008EC417 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		BE9F54CE226B3C2D008EC417 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		BE9F54D0226B3CD8008EC417 /* CertifiedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertifiedViewController.swift; sourceTree = "<group>"; };
+		BE9F54D2226B3DB4008EC417 /* InterestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestViewController.swift; sourceTree = "<group>"; };
 		C7831188770EBDF9CB74963B /* Pods_18th_Appjam.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_18th_Appjam.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE7EBA00AC961C8D2B6173A2 /* Pods-18th_Appjam.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-18th_Appjam.debug.xcconfig"; path = "Pods/Target Support Files/Pods-18th_Appjam/Pods-18th_Appjam.debug.xcconfig"; sourceTree = "<group>"; };
 		F48AC3A77217511D7908F90F /* Pods-18th_Appjam.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-18th_Appjam.release.xcconfig"; path = "Pods/Target Support Files/Pods-18th_Appjam/Pods-18th_Appjam.release.xcconfig"; sourceTree = "<group>"; };
@@ -140,12 +148,16 @@
 			isa = PBXGroup;
 			children = (
 				BE9F549B226B2290008EC417 /* AppDelegate.swift */,
-				BE9F549D226B2290008EC417 /* ViewController.swift */,
 				BE9F549F226B2290008EC417 /* Main.storyboard */,
 				BE9F54A5226B2293008EC417 /* Assets.xcassets */,
 				BE9F54A7226B2293008EC417 /* LaunchScreen.storyboard */,
 				BE9F54AA226B2293008EC417 /* Info.plist */,
 				BE9F54A2226B2290008EC417 /* _8th_Appjam.xcdatamodeld */,
+				BE9F54CE226B3C2D008EC417 /* WelcomeViewController.swift */,
+				BE9F549D226B2290008EC417 /* LoginViewController.swift */,
+				BE9F54CC226B3BBF008EC417 /* RegisterViewController.swift */,
+				BE9F54D0226B3CD8008EC417 /* CertifiedViewController.swift */,
+				BE9F54D2226B3DB4008EC417 /* InterestViewController.swift */,
 			);
 			path = 18th_Appjam;
 			sourceTree = "<group>";
@@ -331,6 +343,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-18th_Appjam/Pods-18th_Appjam-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework",
 			);
@@ -339,6 +352,7 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast_Swift.framework",
 			);
@@ -398,9 +412,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE9F549E226B2290008EC417 /* ViewController.swift in Sources */,
+				BE9F549E226B2290008EC417 /* LoginViewController.swift in Sources */,
+				BE9F54CF226B3C2D008EC417 /* WelcomeViewController.swift in Sources */,
 				BE9F549C226B2290008EC417 /* AppDelegate.swift in Sources */,
 				BE9F54A4226B2290008EC417 /* _8th_Appjam.xcdatamodeld in Sources */,
+				BE9F54D3226B3DB4008EC417 /* InterestViewController.swift in Sources */,
+				BE9F54D1226B3CD8008EC417 /* CertifiedViewController.swift in Sources */,
+				BE9F54CD226B3BBF008EC417 /* RegisterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
