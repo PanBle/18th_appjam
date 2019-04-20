@@ -32,6 +32,7 @@ class InterestViewController: UIViewController {
         let tel = SendRegisterData.shared.tel
         let favorite = SendRegisterData.shared.favorite
         
+        let param = ["email":\(email),"username":\(username),"password1":\(passwd1),"passsword2":\(passwd2),"gender":\(gender)]
     }
     /*
     // MARK: - Navigation
