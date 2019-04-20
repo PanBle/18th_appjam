@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		10952805A85307E5599FD5DB /* Pods_18th_Appjam.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7831188770EBDF9CB74963B /* Pods_18th_Appjam.framework */; };
+		3755D089226B822300003CF0 /* TermsAndConditionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3755D088226B822300003CF0 /* TermsAndConditionsViewController.swift */; };
 		4B4157FF1F72767C0E66E447 /* Pods_18th_AppjamUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A48B181111D19023C177BE1C /* Pods_18th_AppjamUITests.framework */; };
 		8653BF2992A10131B8B53069 /* Pods_18th_AppjamTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9968507D2DD5E06D2EFFF38 /* Pods_18th_AppjamTests.framework */; };
 		BE9F549C226B2290008EC417 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9F549B226B2290008EC417 /* AppDelegate.swift */; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3755D088226B822300003CF0 /* TermsAndConditionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsAndConditionsViewController.swift; sourceTree = "<group>"; };
 		4C6F85B30A122626D2EE53C1 /* Pods-18th_AppjamTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-18th_AppjamTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-18th_AppjamTests/Pods-18th_AppjamTests.debug.xcconfig"; sourceTree = "<group>"; };
 		57D90F83E1CF01A1A1F7671C /* Pods-18th_AppjamTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-18th_AppjamTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-18th_AppjamTests/Pods-18th_AppjamTests.release.xcconfig"; sourceTree = "<group>"; };
 		648B149753D85DCEEA60B90D /* Pods-18th_AppjamUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-18th_AppjamUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-18th_AppjamUITests/Pods-18th_AppjamUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 				BE9F54CC226B3BBF008EC417 /* RegisterViewController.swift */,
 				BE9F54D0226B3CD8008EC417 /* CertifiedViewController.swift */,
 				BE9F54D2226B3DB4008EC417 /* InterestViewController.swift */,
+				3755D088226B822300003CF0 /* TermsAndConditionsViewController.swift */,
 			);
 			path = 18th_Appjam;
 			sourceTree = "<group>";
@@ -412,6 +415,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3755D089226B822300003CF0 /* TermsAndConditionsViewController.swift in Sources */,
 				BE9F549E226B2290008EC417 /* LoginViewController.swift in Sources */,
 				BE9F54CF226B3C2D008EC417 /* WelcomeViewController.swift in Sources */,
 				BE9F549C226B2290008EC417 /* AppDelegate.swift in Sources */,

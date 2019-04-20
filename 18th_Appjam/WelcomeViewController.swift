@@ -34,8 +34,10 @@ class WelcomeViewController: UIViewController {
     }
     
     @IBAction func registerBtnAction(_ sender: UIButton) {
+        performSegue(withIdentifier: "TermsAndConditionsSegue", sender:  nil)
     }
     @IBAction func loginBtnAction(_ sender: UIButton) {
+        performSegue(withIdentifier: "LoginSegue", sender: nil)
     }
     
 }
