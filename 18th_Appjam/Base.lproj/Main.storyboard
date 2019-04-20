@@ -134,7 +134,6 @@
         <!--Login View Controller-->
         <scene sceneID="EWd-dZ-Tb9">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wZ9-Pf-oYs" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="LoginViewController" id="naj-S2-B7a" customClass="LoginViewController" customModule="_8th_Appjam" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vKv-p9-FOA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -146,6 +145,7 @@
                         <segue destination="i1t-mM-R6A" kind="presentation" identifier="LoginToMainSegue" id="uko-in-fEm"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wZ9-Pf-oYs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1145" y="1203"/>
         </scene>
@@ -667,6 +667,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="titleShadowColor" red="0.25490196078431371" green="0.37254901960784315" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="CompleteButton:" destination="N6q-mb-X36" eventType="touchUpInside" id="gYQ-f8-YXb"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -686,8 +689,19 @@
                         <viewLayoutGuide key="safeArea" id="qAd-gF-y2T"/>
                     </view>
                     <navigationItem key="navigationItem" title="이메일/패스워드" id="0yQ-63-PSn">
-                        <barButtonItem key="leftBarButtonItem" title="인증" id="pq9-2I-iW2"/>
+                        <barButtonItem key="leftBarButtonItem" title="인증" id="pq9-2I-iW2">
+                            <connections>
+                                <action selector="PopButton:" destination="N6q-mb-X36" id="KMn-7a-mzn"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="emailLabel" destination="IKU-wb-wYD" id="oNH-6P-vk5"/>
+                        <outlet property="emailTextField" destination="xag-KA-EeL" id="Xjq-2u-Ixt"/>
+                        <outlet property="passwd1TextField" destination="oxH-3J-MVg" id="zkQ-PK-jGQ"/>
+                        <outlet property="passwd2TextField" destination="vxk-tg-MFc" id="IOm-Bc-LtS"/>
+                        <outlet property="passwdLabel" destination="38U-Zx-kfR" id="Ijd-Lc-L9s"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZPJ-LP-Ioj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -696,7 +710,6 @@
         <!--Item-->
         <scene sceneID="1zF-6c-qRk">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="TVd-Jh-tZP" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="6iB-hq-0qb" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aGT-gg-dqe">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -715,13 +728,13 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="Ma9-lB-vc6"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TVd-Jh-tZP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-865" y="2286"/>
         </scene>
         <!--Item-->
         <scene sceneID="dW6-5B-taR">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6VT-1B-FrL" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="YO9-7T-Pjx" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VAB-b9-QeE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -731,6 +744,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="hTm-Bg-xjp"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6VT-1B-FrL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-29" y="2287"/>
         </scene>
@@ -878,7 +892,6 @@
         <!--Tab Bar Controller-->
         <scene sceneID="I57-2i-B1n">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fct-n9-5eW" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="i1t-mM-R6A" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2xb-xJ-ugx">
@@ -893,6 +906,7 @@
                         <segue destination="YO9-7T-Pjx" kind="relationship" relationship="viewControllers" id="1uw-J1-mkc"/>
                     </connections>
                 </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fct-n9-5eW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-865" y="1560"/>
         </scene>
@@ -915,6 +929,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="titleShadowColor" red="0.25490196079999999" green="0.37254901959999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="completeButton:" destination="Y8g-pF-Ds6" eventType="touchUpInside" id="GqP-mx-axb"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mD5-Ev-GiX">
                                 <rect key="frame" x="165" y="119" width="84" height="84"/>
@@ -949,6 +966,10 @@
                     <navigationItem key="navigationItem" title="개인정보" id="DKt-ET-g8W">
                         <barButtonItem key="leftBarButtonItem" title="ID/PW" id="l1z-oV-Kct"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="imageView" destination="mD5-Ev-GiX" id="W1R-wK-ksJ"/>
+                        <outlet property="nameTextField" destination="f6X-iG-kjb" id="gEe-f9-TwI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GGn-ys-t8o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
