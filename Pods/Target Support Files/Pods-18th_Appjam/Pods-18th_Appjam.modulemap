@@ -1,0 +1,6 @@
+framework module Pods_18th_Appjam {
+  umbrella header "Pods-18th_Appjam-umbrella.h"
+
+  export *
+  module * { export * }
+}
