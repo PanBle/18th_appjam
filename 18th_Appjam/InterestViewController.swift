@@ -7,9 +7,14 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
+import Toast_Swift
 
 class InterestViewController: UIViewController {
 
+    let url = "http://idoldb.iptime.org:8765/account"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -17,6 +22,17 @@ class InterestViewController: UIViewController {
     }
     
 
+    @IBAction func completionButton(_ sender: Any) {
+        let email = SendRegisterData.shared.email
+        let username = SendRegisterData.shared.username
+        let passwd1 = SendRegisterData.shared.passwd1
+        let passwd2 = SendRegisterData.shared.passwd2
+        let gender = Int(SendRegisterData.shared.gender!)
+        let birth = Int(SendRegisterData.shared.birth!)
+        let tel = SendRegisterData.shared.tel
+        let favorite = SendRegisterData.shared.favorite
+        
+    }
     /*
     // MARK: - Navigation
 
