@@ -124,7 +124,7 @@
                         <outlet property="registerAndLoginBtnView" destination="Xm0-yN-IjW" id="gum-yh-GHM"/>
                         <outlet property="termsAndConditionsView" destination="gIL-zO-CBF" id="km4-jh-P6V"/>
                         <segue destination="naj-S2-B7a" kind="presentation" identifier="LoginSegue" id="GTA-GI-egU"/>
-                        <segue destination="nDr-1d-aUQ" kind="presentation" identifier="RegisterSegue" id="Ae8-Lk-KUh"/>
+                        <segue destination="nDr-1d-aUQ" kind="presentation" identifier="TermsAndConditionsSegue" id="Ae8-Lk-KUh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -147,12 +147,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pnO-y1-ftx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1920" y="787"/>
+            <point key="canvasLocation" x="2325" y="942"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="EWd-dZ-Tb9">
             <objects>
-                <viewController id="naj-S2-B7a" customClass="LoginViewController" customModule="_8th_Appjam" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="naj-S2-B7a" customClass="LoginViewController" customModule="_8th_Appjam" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vKv-p9-FOA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -199,9 +199,27 @@
             <point key="canvasLocation" x="-865" y="1541"/>
         </scene>
         <!--Register View Controller-->
+        <scene sceneID="xak-1M-Bb2">
+            <objects>
+                <viewController id="pcq-bk-2oT" customClass="RegisterViewController" customModule="_8th_Appjam" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Mhg-bs-OYc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="2G8-NE-6zd"/>
+                    </view>
+                    <connections>
+                        <segue destination="Dg1-XX-lpX" kind="presentation" identifier="CertifiedSegue" id="VQb-89-M18"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vop-kq-GUa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2326" y="80"/>
+        </scene>
+        <!--Terms And Conditions View Controller-->
         <scene sceneID="evr-aG-3dy">
             <objects>
-                <viewController id="nDr-1d-aUQ" customClass="RegisterViewController" customModule="_8th_Appjam" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="nDr-1d-aUQ" customClass="TermsAndConditionsViewController" customModule="_8th_Appjam" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AZU-dI-TxF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -217,6 +235,7 @@
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
+                                            <action selector="agreeAndStartBtnAction:" destination="nDr-1d-aUQ" eventType="touchUpInside" id="Cey-hJ-jbc"/>
                                             <action selector="registerBtnAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TMw-VZ-9Ak"/>
                                         </connections>
                                     </button>
@@ -226,6 +245,7 @@
                                             <color key="titleColor" red="0.25490196079999999" green="0.37254901959999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
+                                            <action selector="loginBtnAction:" destination="nDr-1d-aUQ" eventType="touchUpInside" id="SOh-MV-tkY"/>
                                             <action selector="loginBtnAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m6s-RG-YUf"/>
                                         </connections>
                                     </button>
@@ -240,7 +260,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DO6-a9-gdI">
-                                <rect key="frame" x="20" y="31.5" width="374" height="704.5"/>
+                                <rect key="frame" x="20" y="56.5" width="374" height="679.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="서비스 이용을 위한 이용약관" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="khh-CY-MiY">
                                         <rect key="frame" x="21.5" y="21" width="331" height="22"/>
@@ -249,7 +269,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="EaD-fU-JwB">
-                                        <rect key="frame" x="21.5" y="60" width="331" height="622.5"/>
+                                        <rect key="frame" x="21.5" y="60" width="331" height="597.5"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <mutableString key="text">제1조(목적)
 
@@ -429,19 +449,21 @@
                             <constraint firstItem="NvH-KX-gI1" firstAttribute="top" secondItem="AZU-dI-TxF" secondAttribute="top" constant="755" id="Icb-MJ-MwF"/>
                             <constraint firstItem="NvH-KX-gI1" firstAttribute="top" secondItem="DO6-a9-gdI" secondAttribute="bottom" constant="19" id="KBb-Ir-mNO"/>
                             <constraint firstItem="NvH-KX-gI1" firstAttribute="leading" secondItem="F4g-aX-abh" secondAttribute="leading" id="vcB-W0-V8x"/>
-                            <constraint firstItem="DO6-a9-gdI" firstAttribute="top" secondItem="F4g-aX-abh" secondAttribute="top" constant="-12.67" id="wFV-gf-IXx"/>
+                            <constraint firstItem="DO6-a9-gdI" firstAttribute="top" secondItem="F4g-aX-abh" secondAttribute="top" constant="12.67" id="wFV-gf-IXx"/>
                             <constraint firstItem="F4g-aX-abh" firstAttribute="bottom" secondItem="NvH-KX-gI1" secondAttribute="bottom" id="zNd-I2-nAX"/>
                             <constraint firstItem="DO6-a9-gdI" firstAttribute="leading" secondItem="F4g-aX-abh" secondAttribute="leading" constant="20" id="zQ7-h7-2c2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="F4g-aX-abh"/>
                     </view>
                     <connections>
-                        <segue destination="Dg1-XX-lpX" kind="presentation" identifier="CertifiedSegue" id="DaA-6Z-zdl"/>
+                        <outlet property="agreeAndLoginView" destination="NvH-KX-gI1" id="ILI-nI-gCS"/>
+                        <outlet property="termsAndConditionsView" destination="DO6-a9-gdI" id="ehD-bl-AdH"/>
+                        <segue destination="pcq-bk-2oT" kind="presentation" identifier="RegisterSegue" id="Jlh-QC-hXM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a8j-Jw-cxo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1144.9275362318842" y="535.71428571428567"/>
+            <point key="canvasLocation" x="1145" y="360"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="WYo-2R-qVy">
@@ -496,22 +518,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d07-14-jnF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1919" y="1493"/>
-        </scene>
-        <!--Certified View Controller-->
-        <scene sceneID="Hdw-Ym-dze">
-            <objects>
-                <viewController id="Yia-J1-SaX" customClass="CertifiedViewController" customModule="_8th_Appjam" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="qb9-eg-8md">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="ete-DA-tvc"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zKn-gc-k2e" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1920" y="787"/>
+            <point key="canvasLocation" x="2325" y="1800"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
