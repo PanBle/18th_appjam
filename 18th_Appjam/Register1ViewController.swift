@@ -15,6 +15,7 @@ class Register1ViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwd1TextField: UITextField!
     @IBOutlet weak var passwd2TextField: UITextField!
+    @IBOutlet weak var completeBtn: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,13 +24,23 @@ class Register1ViewController: UIViewController {
         self.passwdLabel.text = ""
         // Do any additional setup after loading the view.
     }
+    
+    func viewsInit() {
+        completeBtn.makeRoundRadius(cornerRadius: 14)
+        completeBtn.makeShadow(color: "#415FFF", opacity: 0.5, radius: 12)
+        
+        emailTextField.makeRoundRadius(cornerRadius: 14)
+        passwd1TextField.makeRoundRadius(cornerRadius: 14)
+        passwd2TextField.makeRoundRadius(cornerRadius: 14)
+    }
+    
     @IBAction func CompleteButton(_ sender: Any) {
         if validateEmail() && passwd1TextField.text! == passwd2TextField.text!
         {
             SendRegisterData.shared.email = emailTextField.text!
             SendRegisterData.shared.passwd1 = passwd1TextField.text!
             SendRegisterData.shared.passwd2 = passwd2TextField.text!
-            performSegue(withIdentifier: "Register2Segue", sender: nil)
+            performSegue(withIdentifier: "InterestSegue", sender: nil)
         }
         else{
             self.emailLabel.text = "이메일을 확인해주세요!"
@@ -37,6 +48,7 @@ class Register1ViewController: UIViewController {
         }
         
     }
+    
     func validateEmail() -> Bool {
         let emailRegEx = "^.+@([A-Za-z0-9-]+\\.)+[A-Za-z]{2}[A-Za-z]*$"
         let predicate = NSPredicate(format:"SELF MATCHES %@", emailRegEx)

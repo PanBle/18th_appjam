@@ -7,24 +7,22 @@
 //
 
 import UIKit
+import Contacts
 
 class StartUpViewController: UIViewController {
 
+    @IBOutlet weak var startBtn: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func viewsInit() {
+        startBtn.makeRoundRadius(cornerRadius: 14)
+        startBtn.makeShadow(color: "#415FFF", opacity: 0.5, radius: 12)
     }
-    */
-
+    
+    @IBAction func startBtnAction(_ sender: UIButton) {
+    }
 }
