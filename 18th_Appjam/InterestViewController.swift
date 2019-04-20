@@ -44,6 +44,9 @@ class InterestViewController: UIViewController {
                     self.view.makeToast("회원가입에 성공했습니다")
                     self.performSegue(withIdentifier: "InterestToMainSegue", sender: nil)
                 }
+                else{
+                    self.view.makeToast("\(temJSON["error"])")
+                }
             case .failure(let error):
                 self.view.makeToast("Network Error")
             }

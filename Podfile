@@ -5,6 +5,7 @@ pod 'Alamofire'
 pod 'SwiftyJSON', '~> 4.0'
 pod 'Toast-Swift', '~> 5.0.0'
 pod 'SnapKit', '~> 4.0.0'
+pod 'UIColor_Hex_Swift'
 
 target '18th_Appjam' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
