@@ -12,17 +12,30 @@ class Register2ViewController: UIViewController ,UIImagePickerControllerDelegate
     
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var birthTextField: UITextField!
     
     let picker = UIImagePickerController()
-
+    var woman:Bool = false
+    var man:Bool = true
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         imageviewcircler()
         // Do any additional setup after loading the view.
     }
+    @IBAction func manButton(_ sender: Any) {
+        man = true
+        woman = false
+    }
     
-    func temp() {
+    @IBAction func womanButton(_ sender: Any) {
+        man = false
+        woman = true
+    }
+    
+    @IBAction func imageButton(_ sender: Any) {
         let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         
         let camera =  UIAlertAction(title: "사진 찍기", style: .default) { (action) in self.openCamera()}
@@ -43,6 +56,14 @@ class Register2ViewController: UIViewController ,UIImagePickerControllerDelegate
     
     @IBAction func completeButton(_ sender: Any) {
         SendRegisterData.shared.username = nameTextField.text!
+        SendRegisterData.shared.birth = birthTextField.text!
+        if man == true {
+            SendRegisterData.shared.gender = String(0)
+        }else
+        {
+            SendRegisterData.shared.gender = String(1)
+        }
+        
         self.performSegue(withIdentifier: "InterestSegue", sender: nil)
     }
     

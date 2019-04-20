@@ -27,7 +27,6 @@
 		BE9F54BF226B2293008EC417 /* _8th_AppjamUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9F54BE226B2293008EC417 /* _8th_AppjamUITests.swift */; };
 		BE9F54CD226B3BBF008EC417 /* Register1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9F54CC226B3BBF008EC417 /* Register1ViewController.swift */; };
 		BE9F54CF226B3C2D008EC417 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9F54CE226B3C2D008EC417 /* WelcomeViewController.swift */; };
-		BE9F54D1226B3CD8008EC417 /* CertifiedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9F54D0226B3CD8008EC417 /* CertifiedViewController.swift */; };
 		BE9F54D3226B3DB4008EC417 /* InterestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9F54D2226B3DB4008EC417 /* InterestViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -75,7 +74,6 @@
 		BE9F54C0226B2293008EC417 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE9F54CC226B3BBF008EC417 /* Register1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register1ViewController.swift; sourceTree = "<group>"; };
 		BE9F54CE226B3C2D008EC417 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
-		BE9F54D0226B3CD8008EC417 /* CertifiedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertifiedViewController.swift; sourceTree = "<group>"; };
 		BE9F54D2226B3DB4008EC417 /* InterestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestViewController.swift; sourceTree = "<group>"; };
 		C7831188770EBDF9CB74963B /* Pods_18th_Appjam.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_18th_Appjam.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE7EBA00AC961C8D2B6173A2 /* Pods-18th_Appjam.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-18th_Appjam.debug.xcconfig"; path = "Pods/Target Support Files/Pods-18th_Appjam/Pods-18th_Appjam.debug.xcconfig"; sourceTree = "<group>"; };
@@ -172,7 +170,6 @@
 				BE9F549D226B2290008EC417 /* LoginViewController.swift */,
 				BE9F54CC226B3BBF008EC417 /* Register1ViewController.swift */,
 				3755D094226B966300003CF0 /* Register2ViewController.swift */,
-				BE9F54D0226B3CD8008EC417 /* CertifiedViewController.swift */,
 				BE9F54D2226B3DB4008EC417 /* InterestViewController.swift */,
 				3755D088226B822300003CF0 /* TermsAndConditionsViewController.swift */,
 			);
@@ -441,7 +438,6 @@
 				BE9F549C226B2290008EC417 /* AppDelegate.swift in Sources */,
 				BE9F54A4226B2290008EC417 /* _8th_Appjam.xcdatamodeld in Sources */,
 				BE9F54D3226B3DB4008EC417 /* InterestViewController.swift in Sources */,
-				BE9F54D1226B3CD8008EC417 /* CertifiedViewController.swift in Sources */,
 				BE9F54CD226B3BBF008EC417 /* Register1ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
