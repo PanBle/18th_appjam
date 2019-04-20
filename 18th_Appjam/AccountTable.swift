@@ -32,3 +32,7 @@ struct Login : Codable {
     let success : Bool
     let token : String
 }
+
+class Token {
+    var token: String?
+}
