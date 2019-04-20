@@ -1,12 +1,12 @@
 PODS:
-  - Alamofire (5.0.0-beta.5)
+  - Alamofire (4.8.2)
   - SnapKit (4.0.1)
   - SwiftyJSON (4.3.0)
   - Toast-Swift (5.0.0)
   - UIColor_Hex_Swift (5.1.0)
 
 DEPENDENCIES:
-  - Alamofire (~> 5.0.0-beta.5)
+  - Alamofire
   - SnapKit (~> 4.0.0)
   - SwiftyJSON (~> 4.0)
   - Toast-Swift (~> 5.0.0)
@@ -21,12 +21,12 @@ SPEC REPOS:
     - UIColor_Hex_Swift
 
 SPEC CHECKSUMS:
-  Alamofire: 9afb08f7f43efcc71c072374e720fcf67521317d
+  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
   SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
   Toast-Swift: 36f4720243c8582c2be243a60a51e193c761f541
   UIColor_Hex_Swift: 8be7432edacb7fa91c78aa05ef3c30b66e4f9415
 
-PODFILE CHECKSUM: e11eaff43acf90f0967a4cb2f007106124cb47c1
+PODFILE CHECKSUM: 2d81f22d847099183f92b77f505ac0c908d7ccfc
 
 COCOAPODS: 1.5.3

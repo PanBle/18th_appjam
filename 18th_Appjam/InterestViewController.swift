@@ -7,9 +7,9 @@
 //
 
 import UIKit
-import Alamofire
 import SwiftyJSON
 import Toast_Swift
+import Alamofire
 
 class InterestViewController: UIViewController {
 
@@ -32,7 +32,27 @@ class InterestViewController: UIViewController {
         let tel = SendRegisterData.shared.tel
         let favorite = SendRegisterData.shared.favorite
         
-        let param = ["email":\(email),"username":\(username),"password1":\(passwd1),"passsword2":\(passwd2),"gender":\(gender)]
+        let apiURL : URL = URL(string: url + "/register")!
+        
+        let param = ["email":"\(email!)","username":"\(username)","password1":"\(passwd1)","passsword2":"\(passwd2)","gender":gender!, "birth":birth, "tel":"\(tel)", "favorite":"\(favorite)"] as [String : Any]
+        
+        Alamofire.request(apiURL, method: .post, parameters: param, encoding: URLEncoding.default, headers: ["Content-Type":"application/json", "Accept":"application/json"]).responseJSON(completionHandler: {res in
+            switch res.result {
+            case .success(let value):
+                let temJSON = JSON(value)
+                if temJSON["success"].bool! {
+                    self.view.makeToast("회원가입에 성공했습니다")
+                    self.performSegue(withIdentifier: "InterestToMainSegue", sender: nil)
+                }
+                else{
+                    self.view.makeToast("이메일이 겹칩니다")
+                }
+            case .failure(let value):
+                self.view.makeToast("Network error!")
+            }
+        
+        })
+        
     }
     /*
     // MARK: - Navigation
