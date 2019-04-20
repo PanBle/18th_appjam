@@ -18,23 +18,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="QM0-zs-luT">
-                                <rect key="frame" x="87" y="305" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" text="이강백의 희곡 결혼에서  남자는 삶을 잠시 빌리는 것이라 하였습니다.  어쩌면 우리도 다르지 않을지 모릅니다.  무언가를 소유하지 않고, 함께 나누는 것.  바른 세상을 위한 거대한 한 발자국을 시작합시다." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="QM0-zs-luT">
+                                <rect key="frame" x="20" y="562" width="374" height="109"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="안녕하세요!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YH7-Xi-HWZ">
-                                <rect key="frame" x="27" y="83" width="79" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DZe-TK-7ms">
+                                <rect key="frame" x="0.0" y="44" width="414" height="409"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="나누다 아끼다 " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YH7-Xi-HWZ">
+                                <rect key="frame" x="20" y="475" width="374" height="41"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="34"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="세상을 바꾸다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DxJ-H9-ktc">
+                                <rect key="frame" x="20" y="516" width="374" height="41"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YH7-Xi-HWZ" secondAttribute="trailing" constant="20" id="1eq-jb-mkZ"/>
+                            <constraint firstItem="YH7-Xi-HWZ" firstAttribute="top" secondItem="DZe-TK-7ms" secondAttribute="bottom" constant="22" id="427-dn-Dmc"/>
+                            <constraint firstItem="QM0-zs-luT" firstAttribute="top" secondItem="DxJ-H9-ktc" secondAttribute="bottom" constant="10" id="EbR-tH-041"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DZe-TK-7ms" secondAttribute="trailing" id="IZf-pm-xv4"/>
+                            <constraint firstItem="YH7-Xi-HWZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="NtT-5I-OT4"/>
+                            <constraint firstItem="QM0-zs-luT" firstAttribute="leading" secondItem="DxJ-H9-ktc" secondAttribute="leading" id="RT5-CL-ICR"/>
+                            <constraint firstItem="DxJ-H9-ktc" firstAttribute="trailing" secondItem="YH7-Xi-HWZ" secondAttribute="trailing" id="UgR-6j-Nfl"/>
+                            <constraint firstItem="QM0-zs-luT" firstAttribute="trailing" secondItem="DxJ-H9-ktc" secondAttribute="trailing" id="b1Z-xG-wNE"/>
+                            <constraint firstItem="DxJ-H9-ktc" firstAttribute="top" secondItem="YH7-Xi-HWZ" secondAttribute="bottom" id="eyG-hd-jYD"/>
+                            <constraint firstItem="DxJ-H9-ktc" firstAttribute="leading" secondItem="YH7-Xi-HWZ" secondAttribute="leading" id="l1E-rL-jdb"/>
+                            <constraint firstItem="DZe-TK-7ms" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="v82-hK-Fmb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="DZe-TK-7ms" secondAttribute="top" id="vjV-h5-03H"/>
+                            <constraint firstItem="DZe-TK-7ms" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xsK-Wb-cSJ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
@@ -168,6 +190,13 @@
                     <view key="view" contentMode="scaleToFill" id="zYW-DC-p3j">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bhT-ag-sGY">
+                                <rect key="frame" x="136" y="164" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="버튼"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="C0k-yg-k3E"/>
                     </view>
@@ -196,6 +225,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="yEe-YK-qdX"/>
+        <segue reference="Wcx-Id-dT4"/>
     </inferredMetricsTieBreakers>
 </document>
