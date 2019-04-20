@@ -411,8 +411,9 @@
                     </view>
                     <connections>
                         <outlet property="agreeAndLoginView" destination="NvH-KX-gI1" id="ILI-nI-gCS"/>
+                        <outlet property="agreeBtn" destination="euN-np-8SJ" id="r2J-Cb-Wy2"/>
                         <outlet property="termsAndConditionsView" destination="DO6-a9-gdI" id="ehD-bl-AdH"/>
-                        <segue destination="JBV-TT-2U0" kind="presentation" identifier="Register1Segue" id="6zy-9w-Q22"/>
+                        <segue destination="JBV-TT-2U0" kind="presentation" identifier="Register2Segue" id="6zy-9w-Q22"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a8j-Jw-cxo" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -541,6 +542,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.13" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="completeButton:" destination="JBV-TT-2U0" eventType="touchUpInside" id="d5O-3B-pV7"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FMi-Oj-dQn">
                                 <rect key="frame" x="165" y="75" width="84" height="84"/>
@@ -580,6 +584,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="남"/>
+                                <connections>
+                                    <action selector="manButton:" destination="JBV-TT-2U0" eventType="touchUpInside" id="llB-Yb-cUG"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sma-4D-sCq">
                                 <rect key="frame" x="333.5" y="245" width="46" height="46"/>
@@ -590,10 +597,16 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="여"/>
+                                <connections>
+                                    <action selector="womanButton:" destination="JBV-TT-2U0" eventType="touchUpInside" id="Sod-gK-Yot"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PIg-JQ-DTz">
                                 <rect key="frame" x="165" y="75" width="84" height="84"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="imageButton:" destination="JBV-TT-2U0" eventType="touchUpInside" id="2Ye-3T-3Hk"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -623,6 +636,12 @@
                         <barButtonItem key="leftBarButtonItem" title="약관" id="Oun-rV-8Zx"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="birthTextField" destination="K9n-u6-xbg" id="CdR-88-8kR"/>
+                        <outlet property="completeBtn" destination="azY-mk-ReA" id="TRu-DL-YVz"/>
+                        <outlet property="imageView" destination="FMi-Oj-dQn" id="kZn-Sb-AZm"/>
+                        <outlet property="manBtn" destination="VcE-Re-2Fc" id="Xmj-GQ-wIh"/>
+                        <outlet property="nameTextField" destination="Apn-WF-L4a" id="WfW-mw-cn0"/>
+                        <outlet property="womanBtn" destination="Sma-4D-sCq" id="fPW-RC-bbG"/>
                         <segue destination="7yK-Hw-meE" kind="presentation" identifier="Register1Segue" id="6ik-mg-jz2"/>
                     </connections>
                 </viewController>
@@ -648,7 +667,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="비밀번호" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vxk-tg-MFc">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="비밀번호 확인" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vxk-tg-MFc">
                                 <rect key="frame" x="34.5" y="235" width="345" height="46"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="345" id="Xp8-SL-pd6"/>
@@ -722,6 +741,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="completeBtn" destination="l0d-9f-2UC" id="0b6-tt-KXG"/>
                         <outlet property="emailLabel" destination="IKU-wb-wYD" id="oNH-6P-vk5"/>
                         <outlet property="emailTextField" destination="xag-KA-EeL" id="Xjq-2u-Ixt"/>
                         <outlet property="passwd1TextField" destination="oxH-3J-MVg" id="zkQ-PK-jGQ"/>
@@ -951,6 +971,9 @@
                                 <state key="normal" title="시작하기">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="startBtnAction:" destination="cUP-Oy-Fop" eventType="touchUpInside" id="zlA-bb-y4b"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -976,7 +999,7 @@
                         <viewLayoutGuide key="safeArea" id="iBl-Jt-eQx"/>
                     </view>
                     <connections>
-                        <outlet property="startBtn" destination="Pje-sD-E3q" id="nan-if-NWS"/>
+                        <outlet property="startBtn" destination="Pje-sD-E3q" id="edN-E1-P5p"/>
                         <segue destination="i1t-mM-R6A" kind="presentation" identifier="StartUpToMainSegue" id="s0P-Pj-8Q8"/>
                     </connections>
                 </viewController>
@@ -1097,6 +1120,7 @@
                         <barButtonItem key="leftBarButtonItem" title="ID/PW" id="5Ye-0B-lig"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="completeBtn" destination="G5y-1o-Nap" id="NpM-Ti-sdP"/>
                         <segue destination="cUP-Oy-Fop" kind="presentation" identifier="StartUpSegue" id="7kz-EH-oi9"/>
                     </connections>
                 </viewController>

@@ -7,12 +7,16 @@
 //
 
 import UIKit
+import UIColor_Hex_Swift
 
 class Register2ViewController: UIViewController ,UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var birthTextField: UITextField!
+    @IBOutlet weak var completeBtn: UIButton!
+    @IBOutlet weak var manBtn: UIButton!
+    @IBOutlet weak var womanBtn: UIButton!
     
     let picker = UIImagePickerController()
     var woman:Bool = false
@@ -22,17 +26,41 @@ class Register2ViewController: UIViewController ,UIImagePickerControllerDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        imageviewcircler()
-        // Do any additional setup after loading the view.
+        viewsInit()
     }
+    
+    func viewsInit() {
+        completeBtn.makeRoundRadius(cornerRadius: 14)
+        completeBtn.makeShadow(color: "#000000", opacity: 0.13, radius: 12)
+        
+        imageView.makeCircler()
+        manBtn.makeCircler()
+        womanBtn.makeCircler()
+        
+        nameTextField.makeRoundRadius(cornerRadius: 14)
+        birthTextField.makeRoundRadius(cornerRadius: 14)
+    }
+    
+    func btnColorChange() {
+        if man == true {
+            manBtn.backgroundColor = UIColor(named: "#415FFF")
+            manBtn.setTitleColor(UIColor.white, for: UIControl.State.normal)
+        } else {
+            womanBtn.backgroundColor = UIColor(named: "#415FFF")
+            womanBtn.setTitleColor(UIColor.white, for: UIControl.State.normal)
+        }
+    }
+    
     @IBAction func manButton(_ sender: Any) {
         man = true
         woman = false
+        btnColorChange()
     }
     
     @IBAction func womanButton(_ sender: Any) {
         man = false
         woman = true
+        btnColorChange()
     }
     
     @IBAction func imageButton(_ sender: Any) {
@@ -49,11 +77,6 @@ class Register2ViewController: UIViewController ,UIImagePickerControllerDelegate
         self.present(alert, animated: true, completion: nil)
     }
     
-    func imageviewcircler() {
-        self.imageView.layer.cornerRadius = self.imageView.frame.size.width / 2
-        self.imageView.clipsToBounds = true
-    }
-    
     @IBAction func completeButton(_ sender: Any) {
         SendRegisterData.shared.username = nameTextField.text!
         SendRegisterData.shared.birth = birthTextField.text!
@@ -64,7 +87,7 @@ class Register2ViewController: UIViewController ,UIImagePickerControllerDelegate
             SendRegisterData.shared.gender = String(1)
         }
         
-        self.performSegue(withIdentifier: "InterestSegue", sender: nil)
+        self.performSegue(withIdentifier: "Register1Segue", sender: nil)
     }
     
     

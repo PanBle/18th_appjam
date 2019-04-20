@@ -14,10 +14,16 @@ import Toast_Swift
 
 class InterestViewController: UIViewController {
 
+    @IBOutlet weak var completeBtn: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    
+    func viewsInit() {
+        completeBtn.makeRoundRadius(cornerRadius: 14)
+        completeBtn.makeShadow(color: "#415FFF", opacity: 0.5, radius: 12)
     }
     
     @IBAction func CompleteButton(_ sender: Any) {

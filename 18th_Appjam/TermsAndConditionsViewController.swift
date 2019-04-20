@@ -12,6 +12,7 @@ class TermsAndConditionsViewController: UIViewController {
     
     @IBOutlet weak var termsAndConditionsView: UIView!
     @IBOutlet weak var agreeAndLoginView: UIView!
+    @IBOutlet weak var agreeBtn: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,15 +24,13 @@ class TermsAndConditionsViewController: UIViewController {
         termsAndConditionsView.makeRoundRadius(cornerRadius: 14)
         termsAndConditionsView.makeShadow(color: "#071640", opacity: 0.16, radius: 12)
         
-        
-        agreeAndLoginView.layer.shadowColor = UIColor.gray.cgColor
-        agreeAndLoginView.layer.shadowRadius = 3
-        agreeAndLoginView.layer.shadowOpacity = 12
-        agreeAndLoginView.layer.masksToBounds = false
+        agreeAndLoginView.makeShadow(color: "#071640", opacity: 0.16, radius: 12)
+        agreeBtn.makeRoundRadius(cornerRadius: 14)
+        agreeBtn.makeShadow(color: "#415FFF", opacity: 0.5, radius: 12)
     }
     
     @IBAction func agreeAndStartBtnAction(_ sender: UIButton) {
-        performSegue(withIdentifier: "RegisterSegue", sender: nil)
+        performSegue(withIdentifier: "Register2Segue", sender: nil)
     }
     
     @IBAction func loginBtnAction(_ sender: UIButton) {

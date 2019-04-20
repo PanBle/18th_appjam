@@ -26,4 +26,9 @@ extension UIView {
         self.layer.shadowOpacity = opacity
         self.layer.shadowRadius = radius
     }
+    
+    func makeCircler() {
+        self.layer.cornerRadius = self.frame.size.width / 2
+        self.clipsToBounds = true
+    }
 }
