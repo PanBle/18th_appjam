@@ -24,5 +24,6 @@ class StartUpViewController: UIViewController {
     }
     
     @IBAction func startBtnAction(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "StartUpToMainSegue", sender: nil)
     }
 }

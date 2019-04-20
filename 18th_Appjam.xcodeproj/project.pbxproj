@@ -17,6 +17,9 @@
 		3755D0A1226BBE6100003CF0 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3755D0A0226BBE6100003CF0 /* SearchViewController.swift */; };
 		4B4157FF1F72767C0E66E447 /* Pods_18th_AppjamUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A48B181111D19023C177BE1C /* Pods_18th_AppjamUITests.framework */; };
 		8653BF2992A10131B8B53069 /* Pods_18th_AppjamTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9968507D2DD5E06D2EFFF38 /* Pods_18th_AppjamTests.framework */; };
+		BE823D7B226BD35900DF9D1B /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BE823D78226BD35800DF9D1B /* 1.jpg */; };
+		BE823D7C226BD35900DF9D1B /* 3.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = BE823D79226BD35800DF9D1B /* 3.jpeg */; };
+		BE823D7D226BD35900DF9D1B /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BE823D7A226BD35800DF9D1B /* 2.jpg */; };
 		BE9F549C226B2290008EC417 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9F549B226B2290008EC417 /* AppDelegate.swift */; };
 		BE9F549E226B2290008EC417 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9F549D226B2290008EC417 /* LoginViewController.swift */; };
 		BE9F54A1226B2290008EC417 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE9F549F226B2290008EC417 /* Main.storyboard */; };
@@ -60,6 +63,9 @@
 		648B149753D85DCEEA60B90D /* Pods-18th_AppjamUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-18th_AppjamUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-18th_AppjamUITests/Pods-18th_AppjamUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A48B181111D19023C177BE1C /* Pods_18th_AppjamUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_18th_AppjamUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9968507D2DD5E06D2EFFF38 /* Pods_18th_AppjamTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_18th_AppjamTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE823D78226BD35800DF9D1B /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 1.jpg; path = ../../../Downloads/1.jpg; sourceTree = "<group>"; };
+		BE823D79226BD35800DF9D1B /* 3.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 3.jpeg; path = ../../../Downloads/3.jpeg; sourceTree = "<group>"; };
+		BE823D7A226BD35800DF9D1B /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 2.jpg; path = ../../../Downloads/2.jpg; sourceTree = "<group>"; };
 		BE9F5498226B2290008EC417 /* 18th_Appjam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 18th_Appjam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE9F549B226B2290008EC417 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE9F549D226B2290008EC417 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -166,6 +172,9 @@
 				3755D096226B967A00003CF0 /* StartUpViewController.swift */,
 				3755D09C226BB7FF00003CF0 /* AccountTable.swift */,
 				BE9F54A5226B2293008EC417 /* Assets.xcassets */,
+				BE823D78226BD35800DF9D1B /* 1.jpg */,
+				BE823D7A226BD35800DF9D1B /* 2.jpg */,
+				BE823D79226BD35800DF9D1B /* 3.jpeg */,
 				BE9F54A7226B2293008EC417 /* LaunchScreen.storyboard */,
 				BE9F54AA226B2293008EC417 /* Info.plist */,
 				BE9F54A2226B2290008EC417 /* _8th_Appjam.xcdatamodeld */,
@@ -306,7 +315,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE823D7D226BD35900DF9D1B /* 2.jpg in Resources */,
+				BE823D7C226BD35900DF9D1B /* 3.jpeg in Resources */,
 				BE9F54A9226B2293008EC417 /* LaunchScreen.storyboard in Resources */,
+				BE823D7B226BD35900DF9D1B /* 1.jpg in Resources */,
 				BE9F54A6226B2293008EC417 /* Assets.xcassets in Resources */,
 				BE9F54A1226B2290008EC417 /* Main.storyboard in Resources */,
 			);

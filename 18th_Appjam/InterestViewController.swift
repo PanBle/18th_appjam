@@ -17,6 +17,7 @@ class InterestViewController: UIViewController, UICollectionViewDataSource, UICo
     
     let cellcarta:[String] = ["공기계","화장품","신발","케이블","카메라","재능"]
     let cellnumber:[String] = ["2048개", "1024개","512개","256개","128개","64개"]
+    let image = ["1.jpg","2.jpg","3.jpeg","1.jpg","2.jpg","3.jpeg"]
     let cellID = "InterestCell"
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
@@ -25,9 +26,12 @@ class InterestViewController: UIViewController, UICollectionViewDataSource, UICo
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: self.cellID, for: indexPath) as! CustomCell
-//        cell.interestImageView.image
-        cell.nameLabel.text = cellcarta[indexPath.row]
-        cell.numberLabel.text = cellnumber[indexPath.row]
+//        cell.interestImageView.image = UIImage(named: image[indexPath.row])
+        let View=UIView()
+        View.backgroundColor = UIColor(patternImage: UIImage(named :image[indexPath.row])!)
+        cell.backgroundView = View
+        cell.nameLabel.text = self.cellcarta[indexPath.row]
+        cell.numberLabel.text = self.cellnumber[indexPath.row]
         
         return cell
     }
@@ -41,7 +45,11 @@ class InterestViewController: UIViewController, UICollectionViewDataSource, UICo
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        collectionView.delegate = self
+        collectionView.dataSource = self
+//        collectionView.register(CustomCell.self, forCellWithReuseIdentifier: "InterestCell")
         // Do any additional setup after loading the view.
+        viewsInit()
     }
     func viewsInit() {
         completeBtn.makeRoundRadius(cornerRadius: 14)
@@ -49,37 +57,38 @@ class InterestViewController: UIViewController, UICollectionViewDataSource, UICo
     }
     
     @IBAction func CompleteButton(_ sender: Any) {
-        let apiurl: URL = URL(string: "http://idoldb.iptime.org:8765/account/register")!
-    
-        let email = SendRegisterData.shared.email
-        let username = SendRegisterData.shared.username
-        let passwd1 = SendRegisterData.shared.passwd1
-        let passwd2 = SendRegisterData.shared.passwd2
-        let gender = Int(SendRegisterData.shared.gender!)
-        let birth = Int(SendRegisterData.shared.birth!)
-        let tel = SendRegisterData.shared.tel
-        let favorite = SendRegisterData.shared.favorite
-        
-        let param = ["email":"\(email)","username":"\(username)","password1":"\(passwd1)","password2":"\(passwd2)","gender":gender,"birth":birth,"tel":"\(tel)","favorite":"\(favorite)"] as [String : Any]
-        
-        let header = ["Content-Type":"application/json", "Accept":"application/json"]
-        
-        Alamofire.request(apiurl, method: .post, parameters: param, encoding: URLEncoding.default, headers: header).responseJSON(completionHandler: {res in
-            switch res.result {
-            case .success(let value) :
-                let temJSON = JSON(value)
-                if temJSON["success"].bool! {
-                    self.view.makeToast("회원가입에 성공했습니다")
-                    self.performSegue(withIdentifier: "InterestToMainSegue", sender: nil)
-                }
-                else{
-                    self.view.makeToast("\(temJSON["error"])")
-                }
-            case .failure(let error):
-                self.view.makeToast("Network Error")
-            }
-        })
-        
+//        let apiurl: URL = URL(string: "http://idoldb.iptime.org:8765/account/register")!
+//
+//        let email = SendRegisterData.shared.email
+//        let username = SendRegisterData.shared.username
+//        let passwd1 = SendRegisterData.shared.passwd1
+//        let passwd2 = SendRegisterData.shared.passwd2
+//        let gender = Int(SendRegisterData.shared.gender!)
+//        let birth = Int(SendRegisterData.shared.birth!)
+//        let tel = SendRegisterData.shared.tel
+//        let favorite = SendRegisterData.shared.favorite
+//
+//        let param = ["email":"\(email)","username":"\(username)","password1":"\(passwd1)","password2":"\(passwd2)","gender":gender,"birth":birth,"tel":"\(tel)","favorite":"\(favorite)"] as [String : Any]
+//
+//        let header = ["Content-Type":"application/json", "Accept":"application/json"]
+//
+//        Alamofire.request(apiurl, method: .post, parameters: param, encoding: URLEncoding.default, headers: header).responseJSON(completionHandler: {res in
+//            switch res.result {
+//            case .success(let value) :
+//                let temJSON = JSON(value)
+//                if temJSON["success"].bool! {
+//                    self.view.makeToast("회원가입에 성공했습니다")
+//                    self.performSegue(withIdentifier: "StartUpSegue", sender: nil)
+//                }
+//                else{
+//                    self.view.makeToast("\(temJSON["error"])")
+//                }
+//            case .failure(let error):
+//                self.view.makeToast("Network Error")
+//            }
+//        })
+//
+        self.performSegue(withIdentifier: "StartUpSegue", sender: nil)
     }
     
     /*
@@ -94,7 +103,7 @@ class InterestViewController: UIViewController, UICollectionViewDataSource, UICo
 
 }
 class CustomCell: UICollectionViewCell {
-    @IBOutlet weak var interestImageView: UIImageView!
+//    @IBOutlet weak var interestImageView: UIImageView!
     @IBOutlet weak var numberLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
 }
