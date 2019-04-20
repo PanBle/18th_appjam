@@ -20,12 +20,9 @@ class TermsAndConditionsViewController: UIViewController {
     }
     
     func viewsinit() {
+        termsAndConditionsView.makeRoundRadius(cornerRadius: 14)
+        termsAndConditionsView.makeShadow(color: "#071640", opacity: 0.16, radius: 12)
         
-        termsAndConditionsView.layer.cornerRadius = 14
-        termsAndConditionsView.layer.shadowColor = UIColor.gray.cgColor
-        termsAndConditionsView.layer.shadowRadius = 3
-        termsAndConditionsView.layer.shadowOpacity = 12
-        termsAndConditionsView.layer.masksToBounds = false
         
         agreeAndLoginView.layer.shadowColor = UIColor.gray.cgColor
         agreeAndLoginView.layer.shadowRadius = 3

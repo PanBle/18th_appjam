@@ -12,6 +12,7 @@ class WelcomeViewController: UIViewController {
 
     @IBOutlet weak var termsAndConditionsView: UIView!
     @IBOutlet weak var registerAndLoginBtnView: UIView!
+    @IBOutlet weak var RegisterBtn: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,17 +21,12 @@ class WelcomeViewController: UIViewController {
     }
     
     func viewsinit() {
+        termsAndConditionsView.makeRoundRadius(cornerRadius: 14)
+        termsAndConditionsView.makeShadow(color: "#071640", opacity: 0.16, radius: 12)
         
-        termsAndConditionsView.layer.cornerRadius = 14
-        termsAndConditionsView.layer.shadowColor = UIColor.gray.cgColor
-        termsAndConditionsView.layer.shadowRadius = 3
-        termsAndConditionsView.layer.shadowOpacity = 12
-        termsAndConditionsView.layer.masksToBounds = false
+        registerAndLoginBtnView.makeShadow(color: "#071640", opacity: 0.16, radius: 12)
         
-        registerAndLoginBtnView.layer.shadowColor = UIColor.gray.cgColor
-        registerAndLoginBtnView.layer.shadowRadius = 3
-        registerAndLoginBtnView.layer.shadowOpacity = 12
-        registerAndLoginBtnView.layer.masksToBounds = false
+        RegisterBtn.makeRoundRadius(cornerRadius: 14)
     }
     
     @IBAction func registerBtnAction(_ sender: UIButton) {
