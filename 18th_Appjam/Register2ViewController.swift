@@ -8,15 +8,32 @@
 
 import UIKit
 
-class Register2ViewController: UIViewController {
+class Register2ViewController: UIViewController ,UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var nameTextField: UITextField!
+    
+    let picker = UIImagePickerController()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         imageviewcircler()
         // Do any additional setup after loading the view.
+    }
+    
+    func temp() {
+        let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        
+        let camera =  UIAlertAction(title: "사진 찍기", style: .default) { (action) in self.openCamera()}
+        let library =  UIAlertAction(title: "사진 갤러리에서 선택", style: .default) { (action) in self.openLibrary()}
+        let cancel = UIAlertAction(title: "취소", style: .cancel, handler: nil)
+        
+        alert.addAction(library)
+        alert.addAction(camera)
+        alert.addAction(cancel)
+        
+        self.present(alert, animated: true, completion: nil)
     }
     
     func imageviewcircler() {
@@ -29,6 +46,25 @@ class Register2ViewController: UIViewController {
         self.performSegue(withIdentifier: "InterestSegue", sender: nil)
     }
     
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        if let image = info["UIImagePickerControllerOriginalImage"] as? UIImage{
+            imageView.image = image
+            print(info)
+        }
+        dismiss(animated: true, completion: nil)
+    }
+    func openLibrary() {
+        picker.sourceType = .photoLibrary
+        
+        self.present(picker, animated: false, completion: nil)
+    }
+    func openCamera() {
+        picker.sourceType = .camera
+        
+        self.present(picker, animated: false, completion: nil)
+    }
+
     /*
      // MARK: - Navigation
      
