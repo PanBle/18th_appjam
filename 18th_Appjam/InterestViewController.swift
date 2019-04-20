@@ -12,13 +12,37 @@ import SwiftyJSON
 import Toast_Swift
 
 
-class InterestViewController: UIViewController {
+class InterestViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    let cellcarta:[String] = ["공기계","화장품","신발","케이블","카메라","재능"]
+    let cellnumber:[String] = ["2048개", "1024개","512개","256개","128개","64개"]
+    let cellID = "InterestCell"
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
+        return cellcarta.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: self.cellID, for: indexPath) as! CustomCell
+//        cell.interestImageView.image
+        cell.nameLabel.text = cellcarta[indexPath.row]
+        cell.numberLabel.text = cellnumber[indexPath.row]
+        
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath) as! CustomCell
+        cell.backgroundColor = UIColor.blue
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
+    @IBOutlet weak var interest: UICollectionView!
     
     @IBAction func CompleteButton(_ sender: Any) {
         let apiurl: URL = URL(string: "http://idoldb.iptime.org:8765/account/register")!
@@ -64,4 +88,9 @@ class InterestViewController: UIViewController {
     }
     */
 
+}
+class CustomCell: UICollectionViewCell {
+    @IBOutlet weak var interestImageView: UIImageView!
+    @IBOutlet weak var numberLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
 }
