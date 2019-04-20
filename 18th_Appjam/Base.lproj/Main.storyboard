@@ -476,7 +476,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="이름" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l3n-ca-uyc">
-                                <rect key="frame" x="34.5" y="52" width="345" height="46"/>
+                                <rect key="frame" x="34.5" y="96" width="345" height="46"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="46" id="3kZ-7R-WFA"/>
                                     <constraint firstAttribute="width" constant="345" id="cqt-RB-FDY"/>
@@ -486,7 +486,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="생년월일" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cGy-vf-3V8">
-                                <rect key="frame" x="34.5" y="108" width="345" height="46"/>
+                                <rect key="frame" x="34.5" y="152" width="345" height="46"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="345" id="Id7-q4-6zR"/>
                                     <constraint firstAttribute="height" constant="46" id="tNU-Yg-lXt"/>
@@ -496,7 +496,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="전화번호" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LIS-gD-cCK">
-                                <rect key="frame" x="208" y="164" width="171.5" height="46"/>
+                                <rect key="frame" x="208" y="208" width="171.5" height="46"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="46" id="lDg-kT-tVp"/>
                                     <constraint firstAttribute="width" constant="171.5" id="m8r-HT-uiJ"/>
@@ -506,7 +506,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="clZ-WT-V6L">
-                                <rect key="frame" x="36.5" y="164" width="46" height="46"/>
+                                <rect key="frame" x="36.5" y="208" width="46" height="46"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="46" id="Bhl-o2-bpJ"/>
                                     <constraint firstAttribute="width" secondItem="clZ-WT-V6L" secondAttribute="height" multiplier="1:1" id="FIV-yZ-9oU"/>
@@ -516,7 +516,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pxx-98-BkH">
-                                <rect key="frame" x="94.5" y="164" width="46" height="46"/>
+                                <rect key="frame" x="94.5" y="208" width="46" height="46"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="46" id="hC7-C8-s77"/>
                                     <constraint firstAttribute="width" secondItem="pxx-98-BkH" secondAttribute="height" multiplier="1:1" id="hO3-kN-vUb"/>
@@ -526,7 +526,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3CE-TK-nSk">
-                                <rect key="frame" x="152.5" y="164" width="46" height="46"/>
+                                <rect key="frame" x="152.5" y="208" width="46" height="46"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="46" id="2MS-xi-gUg"/>
                                 </constraints>
@@ -535,7 +535,7 @@
                                 </state>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="인증번호" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dF3-6f-0Yj">
-                                <rect key="frame" x="35.5" y="220" width="162.5" height="46"/>
+                                <rect key="frame" x="35.5" y="264" width="162.5" height="46"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="46" id="GWN-uu-WG2"/>
                                     <constraint firstAttribute="width" constant="162.5" id="cSC-la-lcD"/>
@@ -545,7 +545,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6aq-Ku-3xh">
-                                <rect key="frame" x="208" y="220" width="171.5" height="46"/>
+                                <rect key="frame" x="208" y="264" width="171.5" height="46"/>
                                 <color key="backgroundColor" red="0.25490196078431371" green="0.37254901960784315" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="171.5" id="GXO-QK-xBY"/>
@@ -597,7 +597,7 @@
                         <barButtonItem key="leftBarButtonItem" title="약관" id="Oun-rV-8Zx"/>
                     </navigationItem>
                     <connections>
-                        <segue destination="7yK-Hw-meE" kind="presentation" id="6ik-mg-jz2"/>
+                        <segue destination="7yK-Hw-meE" kind="presentation" identifier="Register1Segue" id="6ik-mg-jz2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vfB-7q-VGy" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -701,11 +701,12 @@
                         <outlet property="passwd1TextField" destination="oxH-3J-MVg" id="zkQ-PK-jGQ"/>
                         <outlet property="passwd2TextField" destination="vxk-tg-MFc" id="IOm-Bc-LtS"/>
                         <outlet property="passwdLabel" destination="38U-Zx-kfR" id="Ijd-Lc-L9s"/>
+                        <segue destination="3X4-sJ-kMQ" kind="presentation" identifier="Register2Segue" id="dFm-bK-kKU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZPJ-LP-Ioj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4955.072463768116" y="-190.17857142857142"/>
+            <point key="canvasLocation" x="4848" y="-190"/>
         </scene>
         <!--Item-->
         <scene sceneID="1zF-6c-qRk">
@@ -869,7 +870,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xNK-OA-Lh1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3218.840579710145" y="1966.7410714285713"/>
+            <point key="canvasLocation" x="3235" y="1973"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zwb-EK-hbD">
@@ -969,6 +970,7 @@
                     <connections>
                         <outlet property="imageView" destination="mD5-Ev-GiX" id="W1R-wK-ksJ"/>
                         <outlet property="nameTextField" destination="f6X-iG-kjb" id="gEe-f9-TwI"/>
+                        <segue destination="bCY-zj-OqZ" kind="presentation" identifier="InterestSegue" id="DqO-FK-dD2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GGn-ys-t8o" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1014,6 +1016,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="s0P-Pj-8Q8"/>
-        <segue reference="6zy-9w-Q22"/>
+        <segue reference="wEZ-Sv-27s"/>
     </inferredMetricsTieBreakers>
 </document>
